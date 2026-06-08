@@ -1,0 +1,21 @@
+exclude: "CHANGELOG.md"
+repos:
+  # Detect secrets
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: "v1.5.0"
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
+        exclude: "pre-commit-config.yaml"
+  # Prettier for any YAML, README
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: "v3.8.3"
+    hooks:
+      - id: prettier
+        args: ["--cache=false"]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: check-docstring-first
