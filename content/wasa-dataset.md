@@ -1,9 +1,7 @@
 ---
 date: '2026-06-08T15:39:52+03:00'
-title: 'Dataset'
+title: 'Wasa dataset'
 ---
-
-# Towards Collecting Large-Scale Vehicular Sensor Data for Open Access Dataset
 
 This is the dataset and its description for "Towards Collecting Large-Scale Vehicular Sensor Data for Open Access" paper.
 
@@ -72,11 +70,85 @@ All unknown CAN & GPS signals have been left out of the dataset, and known signa
 
 ## Data examples
 
-images
+/aux/image_color:
 
-json files
+![aux_image_color](./images/aux_image_color_example.png)
 
-## Download links
+| /left/image_rect | /right/image_rect |
+| -- | -- |
+| ![left_image_rect](./images/left_image_rect_example.png) | ![right_image_rect](./images/right_image_rect_example.png) |
+
+/left/depth:
+
+![left_depth](./images/left_depth_example.png)
+
+/left/cost:
+
+![left_cost](./images/left_cost_example.png)
+
+
+| /flir_0/image_raw | /flir_1/image_raw |
+| -- | -- |
+| ![left_image_rect](./images/flir_0_example.png) | ![right_image_rect](./images/flir_1_example.png) |
+
+/lidar_points:
+
+![lidar_points](./images/lidar_example.png)
+
+CAN bus .json:
+
+```json
+    {
+        "timestamp": 1780480412.007036,
+        "frame_id": "0x1D3",
+        "message": "PCM_CRUISE_2",
+        "signal": "CHECKSUM",
+        "value": 4
+    },
+    {
+        "timestamp": 1780480412.007036,
+        "frame_id": "0xB4",
+        "message": "SPEED",
+        "signal": "ENCODER",
+        "value": 45
+    },
+    {
+        "timestamp": 1780480412.007036,
+        "frame_id": "0xB4",
+        "message": "SPEED",
+        "signal": "SPEED",
+        "value": 28.18
+    },
+```
+GPS .json:
+
+```json
+    {
+        "timestamp": 1780480412.039233,
+        "frame_id": "0x601",
+        "message": "BMC_MagneticField",
+        "signal": "MagneticField_X",
+        "value": -71.7
+    },
+    {
+        "timestamp": 1780480412.039233,
+        "frame_id": "0x601",
+        "message": "BMC_MagneticField",
+        "signal": "MagneticField_Y",
+        "value": 41.699999999999996
+    },
+    {
+        "timestamp": 1780480412.039233,
+        "frame_id": "0x601",
+        "message": "BMC_MagneticField",
+        "signal": "MagneticField_Z",
+        "value": -66.3
+    },
+```
+
+Timestamps of all files are included in the file name in [Unix time format](https://en.wikipedia.org/wiki/Unix_time).
+
+## Download methods
 
 city1
 city2
@@ -84,3 +156,6 @@ city3
 highway1
 highway2
 highway3
+
+For more options, check [Allas Docs](https://docs.csc.fi/data/Allas/accessing_allas/#commandline-tools).
+
