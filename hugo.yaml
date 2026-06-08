@@ -9,3 +9,36 @@ module:
 caches:
   images:
     dir: :cacheDir/images
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+enableGitInfo: true
+params:
+  enableInlineShortcodes: true
+  displayUpdatedDate: true
+  dateFormat: "02. 01. 2006 at 03 : 04 : 05"
+  theme:
+    default: dark
+
+search:
+  enable: true
+  type: flexsearch
+
+  flexsearch:
+    index: content
+    tokenize: forward
+
+menu:
+  main:
+    - name: Search
+      weight: 5
+      params:
+        type: search
+    - name: GitHub
+      weight: 6
+      url: http://github.com/m3s-kuura/m3s-kuura.github.io
+      params:
+        icon: github
