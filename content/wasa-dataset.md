@@ -1,6 +1,6 @@
 ---
-date: '2026-06-08T15:39:52+03:00'
-title: 'Wasa dataset'
+date: "2026-06-08T15:39:52+03:00"
+title: "Wasa dataset"
 ---
 
 This is the dataset and its description for "Towards Collecting Large-Scale Vehicular Sensor Data for Open Access" paper.
@@ -19,12 +19,10 @@ The dataset was collected by driving in urban areas of Oulu, Finland while havin
 
 Three separate people drove through the same route in Oulu on a sunny day in June. The city part includes cobblestones, traffic lights, parked vehicles, and pedestrians. The highway route begins with merging onto the highway, and then sustaining 80-100km/h speed.
 
-![city route](/images/city_route.png)
-
-[City route](https://maps.app.goo.gl/3UnANSPNsRBDGEDu9)
-
-![highway route](/images/highway_route.png)
-[Highway route](https://maps.app.goo.gl/GxyeRvVVPpaBBWdR6)
+| City route                                                   | Highway route                                                   |
+| ------------------------------------------------------------ | --------------------------------------------------------------- |
+| ![city route](./images/city_route.png)                       | ![highway route](./images/highway_route.png)                    |
+| [City route link](https://maps.app.goo.gl/3UnANSPNsRBDGEDu9) | [Highway route link](https://maps.app.goo.gl/GxyeRvVVPpaBBWdR6) |
 
 ### Computer and software setup
 
@@ -74,8 +72,8 @@ All unknown CAN & GPS signals have been left out of the dataset, and known signa
 
 ![aux_image_color](./images/aux_image_color_example.png)
 
-| /left/image_rect | /right/image_rect |
-| -- | -- |
+| /left/image_rect                                         | /right/image_rect                                          |
+| -------------------------------------------------------- | ---------------------------------------------------------- |
 | ![left_image_rect](./images/left_image_rect_example.png) | ![right_image_rect](./images/right_image_rect_example.png) |
 
 /left/depth:
@@ -86,9 +84,8 @@ All unknown CAN & GPS signals have been left out of the dataset, and known signa
 
 ![left_cost](./images/left_cost_example.png)
 
-
-| /flir_0/image_raw | /flir_1/image_raw |
-| -- | -- |
+| /flir_0/image_raw                               | /flir_1/image_raw                                |
+| ----------------------------------------------- | ------------------------------------------------ |
 | ![left_image_rect](./images/flir_0_example.png) | ![right_image_rect](./images/flir_1_example.png) |
 
 /lidar_points:
@@ -120,6 +117,7 @@ CAN bus .json:
         "value": 28.18
     },
 ```
+
 GPS .json:
 
 ```json
@@ -158,4 +156,3 @@ highway2
 highway3
 
 For more options, check [Allas Docs](https://docs.csc.fi/data/Allas/accessing_allas/#commandline-tools).
-
