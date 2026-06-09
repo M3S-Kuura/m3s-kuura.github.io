@@ -165,101 +165,101 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 <details>
 <summary>City 1</summary>
 
-| Size | Data source                                                                  |
-| ---- | ---------------------------------------------------------------------------- |
-| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/city/aux_image_color.tar)   |
-| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/city/left_image_rect.tar)   |
-| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/city/right_image_rect.tar) |
-| --   | [/left/depth](https://a3s.fi/swift/v1/wasa1/city/left_depth.tar)             |
-| --   | [/left/cost](https://a3s.fi/swift/v1/wasa1/city/left_cost.tar)               |
-| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa1/city/lidar_points.tar)         |
-| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_0_image_raw.tar) |
-| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_1_image_raw.tar) |
-| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/city/can.tar)              |
+| Size estimation | Data source                                                                  |
+| --------------- | ---------------------------------------------------------------------------- |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/city/aux_image_color.tar)   |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/city/left_image_rect.tar)   |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/city/right_image_rect.tar) |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa1/city/left_depth.tar)             |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa1/city/left_cost.tar)               |
+| 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa1/city/lidar_points.tar)         |
+| 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_0_image_raw.tar) |
+| 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_1_image_raw.tar) |
+| 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/city/can.tar)              |
 
 </details>
 <details>
 
 <summary>City 2</summary>
 
-| Size | Data source                                                                  |
-| ---- | ---------------------------------------------------------------------------- |
-| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/city/aux_image_color.tar)   |
-| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/city/left_image_rect.tar)   |
-| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/city/right_image_rect.tar) |
-| --   | [/left/depth](https://a3s.fi/swift/v1/wasa2/city/left_depth.tar)             |
-| --   | [/left/cost](https://a3s.fi/swift/v1/wasa2/city/left_cost.tar)               |
-| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa2/city/lidar_points.tar)         |
-| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_0_image_raw.tar) |
-| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_1_image_raw.tar) |
-| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/city/can.tar)              |
+| Size estimation | Data source                                                                  |
+| --------------- | ---------------------------------------------------------------------------- |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/city/aux_image_color.tar)   |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/city/left_image_rect.tar)   |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/city/right_image_rect.tar) |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa2/city/left_depth.tar)             |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa2/city/left_cost.tar)               |
+| 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa2/city/lidar_points.tar)         |
+| 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_0_image_raw.tar) |
+| 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_1_image_raw.tar) |
+| 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/city/can.tar)              |
 
 </details>
 <details>
 
 <summary>City 3</summary>
 
-| Size | Data source                                                                  |
-| ---- | ---------------------------------------------------------------------------- |
-| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/city/aux_image_color.tar)   |
-| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/city/left_image_rect.tar)   |
-| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/city/right_image_rect.tar) |
-| --   | [/left/depth](https://a3s.fi/swift/v1/wasa3/city/left_depth.tar)             |
-| --   | [/left/cost](https://a3s.fi/swift/v1/wasa3/city/left_cost.tar)               |
-| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa3/city/lidar_points.tar)         |
-| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_0_image_raw.tar) |
-| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_1_image_raw.tar) |
-| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/city/can.tar)              |
+| Size estimation | Data source                                                                  |
+| --------------- | ---------------------------------------------------------------------------- |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/city/aux_image_color.tar)   |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/city/left_image_rect.tar)   |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/city/right_image_rect.tar) |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa3/city/left_depth.tar)             |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa3/city/left_cost.tar)               |
+| 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa3/city/lidar_points.tar)         |
+| 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_0_image_raw.tar) |
+| 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_1_image_raw.tar) |
+| 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/city/can.tar)              |
 
 </details>
 <details>
 
 <summary>Highway 1</summary>
 
-| Size | Data source                                                                     |
-| ---- | ------------------------------------------------------------------------------- |
-| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/highway/aux_image_color.tar)   |
-| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/highway/left_image_rect.tar)   |
-| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/highway/right_image_rect.tar) |
-| --   | [/left/depth](https://a3s.fi/swift/v1/wasa1/highway/left_depth.tar)             |
-| --   | [/left/cost](https://a3s.fi/swift/v1/wasa1/highway/left_cost.tar)               |
-| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa1/highway/lidar_points.tar)         |
-| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_0_image_raw.tar) |
-| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_1_image_raw.tar) |
-| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/highway/can.tar)              |
+| Size estimation | Data source                                                                     |
+| --------------- | ------------------------------------------------------------------------------- |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/highway/aux_image_color.tar)   |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/highway/left_image_rect.tar)   |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/highway/right_image_rect.tar) |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa1/highway/left_depth.tar)             |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa1/highway/left_cost.tar)               |
+| 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa1/highway/lidar_points.tar)         |
+| 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_0_image_raw.tar) |
+| 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_1_image_raw.tar) |
+| 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/highway/can.tar)              |
 
 </details>
 <details>
 
 <summary>Highway 2</summary>
 
-| Size | Data source                                                                     |
-| ---- | ------------------------------------------------------------------------------- |
-| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/highway/aux_image_color.tar)   |
-| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/highway/left_image_rect.tar)   |
-| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/highway/right_image_rect.tar) |
-| --   | [/left/depth](https://a3s.fi/swift/v1/wasa2/highway/left_depth.tar)             |
-| --   | [/left/cost](https://a3s.fi/swift/v1/wasa2/highway/left_cost.tar)               |
-| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa2/highway/lidar_points.tar)         |
-| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_0_image_raw.tar) |
-| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_1_image_raw.tar) |
-| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/highway/can.tar)              |
+| Size estimation | Data source                                                                     |
+| --------------- | ------------------------------------------------------------------------------- |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/highway/aux_image_color.tar)   |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/highway/left_image_rect.tar)   |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/highway/right_image_rect.tar) |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa2/highway/left_depth.tar)             |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa2/highway/left_cost.tar)               |
+| 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa2/highway/lidar_points.tar)         |
+| 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_0_image_raw.tar) |
+| 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_1_image_raw.tar) |
+| 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/highway/can.tar)              |
 
 </details>
 <details>
 
 <summary>Highway 3</summary>
 
-| Size | Data source                                                                     |
-| ---- | ------------------------------------------------------------------------------- |
-| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/highway/aux_image_color.tar)   |
-| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/highway/left_image_rect.tar)   |
-| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/highway/right_image_rect.tar) |
-| --   | [/left/depth](https://a3s.fi/swift/v1/wasa3/highway/left_depth.tar)             |
-| --   | [/left/cost](https://a3s.fi/swift/v1/wasa3/highway/left_cost.tar)               |
-| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa3/highway/lidar_points.tar)         |
-| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_0_image_raw.tar) |
-| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_1_image_raw.tar) |
-| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/highway/can.tar)              |
+| Size estimation | Data source                                                                     |
+| --------------- | ------------------------------------------------------------------------------- |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/highway/aux_image_color.tar)   |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/highway/left_image_rect.tar)   |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/highway/right_image_rect.tar) |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa3/highway/left_depth.tar)             |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa3/highway/left_cost.tar)               |
+| 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa3/highway/lidar_points.tar)         |
+| 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_0_image_raw.tar) |
+| 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_1_image_raw.tar) |
+| 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/highway/can.tar)              |
 
 </details>
