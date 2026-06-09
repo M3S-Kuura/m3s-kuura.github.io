@@ -172,6 +172,7 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 | --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/city/right_image_rect.tar) |
 | --   | [/left/depth](https://a3s.fi/swift/v1/wasa1/city/left_depth.tar)             |
 | --   | [/left/cost](https://a3s.fi/swift/v1/wasa1/city/left_cost.tar)               |
+| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa1/city/lidar_points.tar)         |
 | --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_0_image_raw.tar) |
 | --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_1_image_raw.tar) |
 | --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/city/can.tar)              |
@@ -188,6 +189,7 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 | --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/city/right_image_rect.tar) |
 | --   | [/left/depth](https://a3s.fi/swift/v1/wasa2/city/left_depth.tar)             |
 | --   | [/left/cost](https://a3s.fi/swift/v1/wasa2/city/left_cost.tar)               |
+| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa2/city/lidar_points.tar)         |
 | --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_0_image_raw.tar) |
 | --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_1_image_raw.tar) |
 | --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/city/can.tar)              |
@@ -204,6 +206,7 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 | --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/city/right_image_rect.tar) |
 | --   | [/left/depth](https://a3s.fi/swift/v1/wasa3/city/left_depth.tar)             |
 | --   | [/left/cost](https://a3s.fi/swift/v1/wasa3/city/left_cost.tar)               |
+| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa3/city/lidar_points.tar)         |
 | --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_0_image_raw.tar) |
 | --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_1_image_raw.tar) |
 | --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/city/can.tar)              |
@@ -220,6 +223,7 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 | --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/highway/right_image_rect.tar) |
 | --   | [/left/depth](https://a3s.fi/swift/v1/wasa1/highway/left_depth.tar)             |
 | --   | [/left/cost](https://a3s.fi/swift/v1/wasa1/highway/left_cost.tar)               |
+| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa1/highway/lidar_points.tar)         |
 | --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_0_image_raw.tar) |
 | --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_1_image_raw.tar) |
 | --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/highway/can.tar)              |
@@ -236,6 +240,7 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 | --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/highway/right_image_rect.tar) |
 | --   | [/left/depth](https://a3s.fi/swift/v1/wasa2/highway/left_depth.tar)             |
 | --   | [/left/cost](https://a3s.fi/swift/v1/wasa2/highway/left_cost.tar)               |
+| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa2/highway/lidar_points.tar)         |
 | --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_0_image_raw.tar) |
 | --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_1_image_raw.tar) |
 | --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/highway/can.tar)              |
@@ -252,6 +257,7 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 | --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/highway/right_image_rect.tar) |
 | --   | [/left/depth](https://a3s.fi/swift/v1/wasa3/highway/left_depth.tar)             |
 | --   | [/left/cost](https://a3s.fi/swift/v1/wasa3/highway/left_cost.tar)               |
+| --   | [/lidar_points](https://a3s.fi/swift/v1/wasa3/highway/lidar_points.tar)         |
 | --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_0_image_raw.tar) |
 | --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_1_image_raw.tar) |
 | --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/highway/can.tar)              |
