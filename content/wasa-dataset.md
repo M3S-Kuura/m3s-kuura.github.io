@@ -257,5 +257,3 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 | --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/highway/can.tar)              |
 
 </details>
-
-For more options, check [Allas Docs](https://docs.csc.fi/data/Allas/accessing_allas/#commandline-tools).
