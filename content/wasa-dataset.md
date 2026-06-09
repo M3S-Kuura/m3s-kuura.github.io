@@ -148,20 +148,6 @@ Timestamps of all files are included in the file name in [Unix time format](http
 
 ## Download links
 
-Files are stored in a .tar file. Most compression utilities such as WinRAR can extract them. On Linux, run
-
-```bash
-tar -xvf <file_name>.tar -C ./<output_folder_name>
-```
-
-on the command line.
-
-For example:
-
-```bash
-tar -xvf aux_image_color.tar -C ./aux_image_color
-```
-
 <details>
 <summary>City 1</summary>
 
@@ -263,3 +249,17 @@ tar -xvf aux_image_color.tar -C ./aux_image_color
 | 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/highway/can.tar)              |
 
 </details>
+
+---
+
+Files are stored in a .tar archive file. Most compression utilities such as WinRAR can extract them. On Linux, run the following on the command line:
+
+```bash
+tar -xvf <file_name>.tar
+```
+
+For example:
+
+```bash
+tar -xvf aux_image_color.tar
+```
