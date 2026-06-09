@@ -11,9 +11,11 @@ _B. Kämä, O. Timonen, N. Stafford, J. Lotvonen, O. Kalliokoski, A. Kanerva, P.
 Towards Collecting Large-Scale Vehicular Sensor Data for Open Access.
 TODO: published where?_
 
+![Our trusty steed](./images/auto.jpg)
+
 ## How the Dataset was Collected
 
-The dataset was collected by driving in urban areas of Oulu, Finland while having sensors installed on the roof of the car. Sensor data was collected and recorded via ROS2 on a Jetson AGX computer. Recorded data includes stereo camera images, thermal camera images, lidar pointcloud, plus the car's CAN data and GPS information.
+The dataset was collected by driving in urban areas of Oulu, Finland while having sensors installed on the roof of the car. Sensor data was collected and recorded via ROS2 on on-board computer. Recorded data includes stereo camera images, thermal camera images, lidar pointcloud, plus the car's CAN bus data and GPS information.
 
 ### Route and environmental specifics
 
@@ -26,7 +28,7 @@ Three separate people drove through the same route in Oulu on a sunny day in Jun
 
 ### Computer and software setup
 
-The computer inside the car is a Jetson AGX Orin Developer Kit on Ubuntu 22.04 running ROS2 nodes in docker containers. The nodes include sensor drivers, and a recorder to write the messages on an SSD in the form of [.mcap](https://mcap.dev/) files. [The source code for our setup is publicly available on github](https://github.com/M3S-Kuura/ros2-device-control).
+The computer inside the car is a [NVIDIA Jetson AGX Orin Developer Kit](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/) on Ubuntu 22.04 running ROS2 nodes in Docker containers. The nodes include sensor drivers, and a recorder to write the messages on an SSD in the form of [.mcap](https://mcap.dev/) files. [The source code for our setup is publicly available on github](https://github.com/M3S-Kuura/ros2-device-control).
 
 ### Car and sensor setup
 
@@ -48,23 +50,21 @@ Recording settings for Lidar:
 
 ## Data format
 
-The dataset has people's faces and vehicles' license plates blurred to respect people's privacy. Hence the dataset does not contain the original .mcap files which would include unblurred images.
+The dataset has people's faces and vehicle license plates blurred to respect people's privacy. Hence the dataset does not contain the original .mcap files which would include unblurred images.
 
-CAN, gps .json
+| Data source                  | Description                                  | Original format             | Dataset format       | Target frequency |
+| ---------------------------- | -------------------------------------------- | --------------------------- | -------------------- | ---------------- |
+| /lidar_points ROS2 topic     | LiDAR                                        | PointCloud2 (230400 points) | .laz                 | 10hz             |
+| /image_raw ROS2 topic        | Thermal cameras                              | mono16                      | 8-bit colormap .png  | 60hz             |
+| /aux/image_color ROS2 topic  | Multisense's middle camera                   | bgr8                        | 8-bit rgb .png       | 25hz             |
+| /left/image_rect ROS2 topic  | Multisense's left camera                     | mono8                       | 8-bit grayscale .png | 25hz             |
+| /right/image_rect ROS2 topic | Multisense's right camera                    | mono8                       | 8-bit grayscale .png | 25hz             |
+| /left/depth ROS2 topic       | Multisense's estimated depth distance        | 32FC1                       | 8-bit colormap .png  | 25hz             |
+| /left/cost ROS2 topic        | Multisense's confidence value of /left/depth | mono8                       | 8-bit grayscale .png | 25hz             |
+| Car CAN bus                  | Car sensor messages                          | Hexadecimal bytes           | Human-readable .json | --               |
+| PCAN-GPS                     | GPS sensor messages                          | Hexadecimal bytes           | Human-readable .json | --               |
 
-| Data source              | Description                                  | Original format             | Dataset format       |
-| ------------------------ | -------------------------------------------- | --------------------------- | -------------------- |
-| /lidar_points ROS2 topic | LiDAR                                        | PointCloud2 (230400 points) | .laz                 |
-| /image_raw ROS2 topic    | Thermal cameras                              | mono16                      | 8-bit colormap .png  |
-| /aux/image_color         | Multisense's middle camera                   | bgr8                        | 8-bit rgb .png       |
-| /left/image_rect         | Multisense's left camera                     | mono8                       | 8-bit grayscale .png |
-| /right/image_rect        | Multisense's right camera                    | mono8                       | 8-bit grayscale .png |
-| /left/depth              | Multisense's estimated depth distance        | 32FC1                       | 8-bit colormap .png  |
-| /left/cost               | Multisense's confidence value of /left/depth | mono8                       | 8-bit grayscale .png |
-| Car CAN bus              | Car sensor messages                          | Hexadecimal bytes           | Human-readable .json |
-| PCAN-GPS                 | GPS sensor messages                          | Hexadecimal bytes           | Human-readable .json |
-
-All unknown CAN & GPS signals have been left out of the dataset, and known signals have been converted to human-readable form.
+Message frequencies are generally slightly below target because some messages are dropped during recording. CAN and GPS frequencies are over 700 messages per second, however they have no "target" frequency. There are no messages lost in them, but unknown CAN signals are excluded out of this dataset. 100% of GPS signals are converted and included in this dataset.
 
 ## Data examples
 
@@ -146,13 +146,116 @@ GPS .json:
 
 Timestamps of all files are included in the file name in [Unix time format](https://en.wikipedia.org/wiki/Unix_time).
 
-## Download methods
+## Download links
 
-city1
-city2
-city3
-highway1
-highway2
-highway3
+Files are stored in a .tar file. Most compression utilities such as WinRAR can extract them. On Linux, run
+
+```bash
+tar -xvf <file_name>.tar -C ./<output_folder_name>
+```
+
+on the command line.
+
+For example:
+
+```bash
+tar -xvf aux_image_color.tar -C ./aux_image_color
+```
+
+<details>
+<summary>City 1</summary>
+
+| Size | Data source                                                                  |
+| ---- | ---------------------------------------------------------------------------- |
+| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/city/aux_image_color.tar)   |
+| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/city/left_image_rect.tar)   |
+| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/city/right_image_rect.tar) |
+| --   | [/left/depth](https://a3s.fi/swift/v1/wasa1/city/left_depth.tar)             |
+| --   | [/left/cost](https://a3s.fi/swift/v1/wasa1/city/left_cost.tar)               |
+| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_0_image_raw.tar) |
+| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_1_image_raw.tar) |
+| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/city/can.tar)              |
+
+</details>
+<details>
+
+<summary>City 2</summary>
+
+| Size | Data source                                                                  |
+| ---- | ---------------------------------------------------------------------------- |
+| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/city/aux_image_color.tar)   |
+| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/city/left_image_rect.tar)   |
+| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/city/right_image_rect.tar) |
+| --   | [/left/depth](https://a3s.fi/swift/v1/wasa2/city/left_depth.tar)             |
+| --   | [/left/cost](https://a3s.fi/swift/v1/wasa2/city/left_cost.tar)               |
+| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_0_image_raw.tar) |
+| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_1_image_raw.tar) |
+| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/city/can.tar)              |
+
+</details>
+<details>
+
+<summary>City 3</summary>
+
+| Size | Data source                                                                  |
+| ---- | ---------------------------------------------------------------------------- |
+| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/city/aux_image_color.tar)   |
+| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/city/left_image_rect.tar)   |
+| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/city/right_image_rect.tar) |
+| --   | [/left/depth](https://a3s.fi/swift/v1/wasa3/city/left_depth.tar)             |
+| --   | [/left/cost](https://a3s.fi/swift/v1/wasa3/city/left_cost.tar)               |
+| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_0_image_raw.tar) |
+| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_1_image_raw.tar) |
+| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/city/can.tar)              |
+
+</details>
+<details>
+
+<summary>Highway 1</summary>
+
+| Size | Data source                                                                     |
+| ---- | ------------------------------------------------------------------------------- |
+| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/highway/aux_image_color.tar)   |
+| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/highway/left_image_rect.tar)   |
+| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/highway/right_image_rect.tar) |
+| --   | [/left/depth](https://a3s.fi/swift/v1/wasa1/highway/left_depth.tar)             |
+| --   | [/left/cost](https://a3s.fi/swift/v1/wasa1/highway/left_cost.tar)               |
+| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_0_image_raw.tar) |
+| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_1_image_raw.tar) |
+| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/highway/can.tar)              |
+
+</details>
+<details>
+
+<summary>Highway 2</summary>
+
+| Size | Data source                                                                     |
+| ---- | ------------------------------------------------------------------------------- |
+| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/highway/aux_image_color.tar)   |
+| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/highway/left_image_rect.tar)   |
+| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/highway/right_image_rect.tar) |
+| --   | [/left/depth](https://a3s.fi/swift/v1/wasa2/highway/left_depth.tar)             |
+| --   | [/left/cost](https://a3s.fi/swift/v1/wasa2/highway/left_cost.tar)               |
+| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_0_image_raw.tar) |
+| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_1_image_raw.tar) |
+| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/highway/can.tar)              |
+
+</details>
+<details>
+
+<summary>Highway 3</summary>
+
+| Size | Data source                                                                     |
+| ---- | ------------------------------------------------------------------------------- |
+| 5Gb  | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/highway/aux_image_color.tar)   |
+| --   | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/highway/left_image_rect.tar)   |
+| --   | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/highway/right_image_rect.tar) |
+| --   | [/left/depth](https://a3s.fi/swift/v1/wasa3/highway/left_depth.tar)             |
+| --   | [/left/cost](https://a3s.fi/swift/v1/wasa3/highway/left_cost.tar)               |
+| --   | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_0_image_raw.tar) |
+| --   | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_1_image_raw.tar) |
+| --   | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/highway/can.tar)              |
+
+</details>
 
 For more options, check [Allas Docs](https://docs.csc.fi/data/Allas/accessing_allas/#commandline-tools).
