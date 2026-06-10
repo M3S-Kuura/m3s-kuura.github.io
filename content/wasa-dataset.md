@@ -42,7 +42,7 @@ Lidar: [Hesai OT128 Lidar](https://www.hesaitech.com/product/ot128/)
 
 Recording settings for Lidar:
 
-- Low resolution
+- Standard resolution
 - Single-point first return
 - 600rpm
 
@@ -61,8 +61,8 @@ The dataset has people's faces and vehicle license plates blurred to respect peo
 | /right/image_rect ROS2 topic | Multisense's right camera                    | mono8                       | 8-bit grayscale .png | 25hz             |
 | /left/depth ROS2 topic       | Multisense's estimated depth distance        | 32FC1                       | 8-bit colormap .png  | 25hz             |
 | /left/cost ROS2 topic        | Multisense's confidence value of /left/depth | mono8                       | 8-bit grayscale .png | 25hz             |
-| Car CAN bus                  | Car sensor messages                          | Hexadecimal bytes           | Human-readable .json | --               |
-| PCAN-GPS                     | GPS sensor messages                          | Hexadecimal bytes           | Human-readable .json | --               |
+| Car CAN bus                  | Car CAN bus messages                         | Hexadecimal bytes           | Human-readable .json |                  |
+| PCAN-GPS                     | GPS sensor data                              | Hexadecimal bytes           | Human-readable .json |                  |
 
 Message frequencies are generally slightly below target because some messages are dropped during recording. CAN and GPS frequencies are over 700 messages per second, however they have no "target" frequency. There are no messages lost in them, but unknown CAN signals are excluded out of this dataset. 100% of GPS signals are converted and included in this dataset.
 
