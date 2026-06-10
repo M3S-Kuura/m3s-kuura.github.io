@@ -44,7 +44,7 @@ Recording settings for Lidar:
 
 - Standard resolution
 - Single-point first return
-- 600rpm
+- 600 RPM
 
 ![image of the roof](./images/sensors_on_roof.jpg)
 
