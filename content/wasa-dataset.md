@@ -52,17 +52,17 @@ Recording settings for Lidar:
 
 The dataset has people's faces and vehicle license plates blurred to respect people's privacy. Hence the dataset does not contain the original .mcap files which would include unblurred images.
 
-| Data source                  | Description                                  | Original format             | Dataset format       | Target frequency |
-| ---------------------------- | -------------------------------------------- | --------------------------- | -------------------- | ---------------- |
-| /lidar_points ROS2 topic     | LiDAR                                        | PointCloud2 (230400 points) | .laz                 | 10hz             |
-| /image_raw ROS2 topic        | Thermal cameras                              | mono16                      | 8-bit colormap .png  | 60hz             |
-| /aux/image_color ROS2 topic  | Multisense's middle camera                   | bgr8                        | 8-bit rgb .png       | 25hz             |
-| /left/image_rect ROS2 topic  | Multisense's left camera                     | mono8                       | 8-bit grayscale .png | 25hz             |
-| /right/image_rect ROS2 topic | Multisense's right camera                    | mono8                       | 8-bit grayscale .png | 25hz             |
-| /left/depth ROS2 topic       | Multisense's estimated depth distance        | 32FC1                       | 8-bit colormap .png  | 25hz             |
-| /left/cost ROS2 topic        | Multisense's confidence value of /left/depth | mono8                       | 8-bit grayscale .png | 25hz             |
-| Car CAN bus                  | Car sensor messages                          | Hexadecimal bytes           | Human-readable .json | --               |
-| PCAN-GPS                     | GPS sensor messages                          | Hexadecimal bytes           | Human-readable .json | --               |
+| Data source                  | Description                                     | Original format             | Dataset format       | Target frequency |
+| ---------------------------- | ----------------------------------------------- | --------------------------- | -------------------- | ---------------- |
+| /lidar_points ROS2 topic     | LiDAR                                           | PointCloud2 (230400 points) | .laz                 | 10hz             |
+| /image_raw ROS2 topic        | Thermal cameras                                 | mono16                      | 8-bit colormap .png  | 60hz             |
+| /aux/image_color ROS2 topic  | Stereo camera's middle camera                   | bgr8                        | 8-bit rgb .png       | 25hz             |
+| /left/image_rect ROS2 topic  | Stereo camera's left camera                     | mono8                       | 8-bit grayscale .png | 25hz             |
+| /right/image_rect ROS2 topic | Stereo camera's right camera                    | mono8                       | 8-bit grayscale .png | 25hz             |
+| /left/depth ROS2 topic       | Stereo camera's estimated depth distance        | 32FC1                       | 8-bit colormap .png  | 25hz             |
+| /left/cost ROS2 topic        | Stereo camera's confidence value of /left/depth | mono8                       | 8-bit grayscale .png | 25hz             |
+| Car CAN bus                  | Car sensor messages                             | Hexadecimal bytes           | Human-readable .json | --               |
+| PCAN-GPS                     | GPS sensor messages                             | Hexadecimal bytes           | Human-readable .json | --               |
 
 Message frequencies are generally slightly below target because some messages are dropped during recording. CAN and GPS frequencies are over 700 messages per second, however they have no "target" frequency. There are no messages lost in them, but unknown CAN signals are excluded out of this dataset. 100% of GPS signals are converted and included in this dataset.
 
@@ -163,11 +163,11 @@ Timestamps of all files are included in the file name in [Unix time format](http
 
 | Size estimation | Download link                                                                | Data source        |
 | --------------- | ---------------------------------------------------------------------------- | ------------------ |
-| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/city/aux_image_color.tar)   | Multisense camera  |
-| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/city/left_image_rect.tar)   | Multisense camera  |
-| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/city/right_image_rect.tar) | Multisense camera  |
-| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa1/city/left_depth.tar)             | Multisense camera  |
-| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa1/city/left_cost.tar)               | Multisense camera  |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/city/aux_image_color.tar)   | Stereo camera      |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/city/left_image_rect.tar)   | Stereo camera      |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/city/right_image_rect.tar) | Stereo camera      |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa1/city/left_depth.tar)             | Stereo camera      |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa1/city/left_cost.tar)               | Stereo camera      |
 | 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa1/city/lidar_points.tar)         | Lidar              |
 | 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_0_image_raw.tar) | Thermal camera     |
 | 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/city/flir_1_image_raw.tar) | Thermal camera     |
@@ -180,11 +180,11 @@ Timestamps of all files are included in the file name in [Unix time format](http
 
 | Size estimation | Download link                                                                | Data source        |
 | --------------- | ---------------------------------------------------------------------------- | ------------------ |
-| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/city/aux_image_color.tar)   | Multisense camera  |
-| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/city/left_image_rect.tar)   | Multisense camera  |
-| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/city/right_image_rect.tar) | Multisense camera  |
-| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa2/city/left_depth.tar)             | Multisense camera  |
-| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa2/city/left_cost.tar)               | Multisense camera  |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/city/aux_image_color.tar)   | Stereo camera      |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/city/left_image_rect.tar)   | Stereo camera      |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/city/right_image_rect.tar) | Stereo camera      |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa2/city/left_depth.tar)             | Stereo camera      |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa2/city/left_cost.tar)               | Stereo camera      |
 | 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa2/city/lidar_points.tar)         | Lidar              |
 | 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_0_image_raw.tar) | Thermal camera     |
 | 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/city/flir_1_image_raw.tar) | Thermal camera     |
@@ -197,11 +197,11 @@ Timestamps of all files are included in the file name in [Unix time format](http
 
 | Size estimation | Download link                                                                | Data source        |
 | --------------- | ---------------------------------------------------------------------------- | ------------------ |
-| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/city/aux_image_color.tar)   | Multisense camera  |
-| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/city/left_image_rect.tar)   | Multisense camera  |
-| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/city/right_image_rect.tar) | Multisense camera  |
-| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa3/city/left_depth.tar)             | Multisense camera  |
-| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa3/city/left_cost.tar)               | Multisense camera  |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/city/aux_image_color.tar)   | Stereo camera      |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/city/left_image_rect.tar)   | Stereo camera      |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/city/right_image_rect.tar) | Stereo camera      |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa3/city/left_depth.tar)             | Stereo camera      |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa3/city/left_cost.tar)               | Stereo camera      |
 | 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa3/city/lidar_points.tar)         | Lidar              |
 | 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_0_image_raw.tar) | Thermal camera     |
 | 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/city/flir_1_image_raw.tar) | Thermal camera     |
@@ -214,11 +214,11 @@ Timestamps of all files are included in the file name in [Unix time format](http
 
 | Size estimation | Download link                                                                   | Data source        |
 | --------------- | ------------------------------------------------------------------------------- | ------------------ |
-| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/highway/aux_image_color.tar)   | Multisense camera  |
-| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/highway/left_image_rect.tar)   | Multisense camera  |
-| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/highway/right_image_rect.tar) | Multisense camera  |
-| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa1/highway/left_depth.tar)             | Multisense camera  |
-| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa1/highway/left_cost.tar)               | Multisense camera  |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa1/highway/aux_image_color.tar)   | Stereo camera      |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa1/highway/left_image_rect.tar)   | Stereo camera      |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa1/highway/right_image_rect.tar) | Stereo camera      |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa1/highway/left_depth.tar)             | Stereo camera      |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa1/highway/left_cost.tar)               | Stereo camera      |
 | 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa1/highway/lidar_points.tar)         | Lidar              |
 | 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_0_image_raw.tar) | Thermal camera     |
 | 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa1/highway/flir_1_image_raw.tar) | Thermal camera     |
@@ -231,11 +231,11 @@ Timestamps of all files are included in the file name in [Unix time format](http
 
 | Size estimation | Download link                                                                   | Data source        |
 | --------------- | ------------------------------------------------------------------------------- | ------------------ |
-| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/highway/aux_image_color.tar)   | Multisense camera  |
-| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/highway/left_image_rect.tar)   | Multisense camera  |
-| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/highway/right_image_rect.tar) | Multisense camera  |
-| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa2/highway/left_depth.tar)             | Multisense camera  |
-| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa2/highway/left_cost.tar)               | Multisense camera  |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa2/highway/aux_image_color.tar)   | Stereo camera      |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa2/highway/left_image_rect.tar)   | Stereo camera      |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa2/highway/right_image_rect.tar) | Stereo camera      |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa2/highway/left_depth.tar)             | Stereo camera      |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa2/highway/left_cost.tar)               | Stereo camera      |
 | 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa2/highway/lidar_points.tar)         | Lidar              |
 | 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_0_image_raw.tar) | Thermal camera     |
 | 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa2/highway/flir_1_image_raw.tar) | Thermal camera     |
@@ -248,11 +248,11 @@ Timestamps of all files are included in the file name in [Unix time format](http
 
 | Size estimation | Download link                                                                   | Data source        |
 | --------------- | ------------------------------------------------------------------------------- | ------------------ |
-| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/highway/aux_image_color.tar)   | Multisense camera  |
-| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/highway/left_image_rect.tar)   | Multisense camera  |
-| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/highway/right_image_rect.tar) | Multisense camera  |
-| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa3/highway/left_depth.tar)             | Multisense camera  |
-| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa3/highway/left_cost.tar)               | Multisense camera  |
+| 5 GB            | [/aux/image_color](https://a3s.fi/swift/v1/wasa3/highway/aux_image_color.tar)   | Stereo camera      |
+| 3 GB            | [/left/image_rect](https://a3s.fi/swift/v1/wasa3/highway/left_image_rect.tar)   | Stereo camera      |
+| 3 GB            | [/right/image_rect](https://a3s.fi/swift/v1/wasa3/highway/right_image_rect.tar) | Stereo camera      |
+| 2 GB            | [/left/depth](https://a3s.fi/swift/v1/wasa3/highway/left_depth.tar)             | Stereo camera      |
+| 2 GB            | [/left/cost](https://a3s.fi/swift/v1/wasa3/highway/left_cost.tar)               | Stereo camera      |
 | 3 GB            | [/lidar_points](https://a3s.fi/swift/v1/wasa3/highway/lidar_points.tar)         | Lidar              |
 | 7 GB            | [/flir_0/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_0_image_raw.tar) | Thermal camera     |
 | 7 GB            | [/flir_1/image_raw](https://a3s.fi/swift/v1/wasa3/highway/flir_1_image_raw.tar) | Thermal camera     |
