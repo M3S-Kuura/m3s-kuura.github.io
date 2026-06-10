@@ -11,6 +11,8 @@ _B. Kämä, O. Timonen, N. Stafford, J. Lotvonen, O. Kalliokoski, A. Kanerva, P.
 Towards Collecting Large-Scale Vehicular Sensor Data for Open Access.
 TODO: published where?_
 
+[Link to the preprint](https://www.researchgate.net/publication/406808081_Towards_Collecting_Large-Scale_Vehicular_Sensor_Data_for_Open_Access)
+
 ![Our trusty steed](./images/auto.jpg)
 
 ## How the Dataset was Collected
