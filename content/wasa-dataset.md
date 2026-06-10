@@ -3,7 +3,7 @@ date: "2026-06-08T15:39:52+03:00"
 title: "WASA dataset"
 ---
 
-This page contains an open multimodal vehicle dataset described in the "Towards Collecting Large-Scale Vehicular Sensor Data for Open Access" paper, published in the 12th International Workshop on Autonomous Systems and Software Architecture (WASA) 2026. The data is free to be used under the Creative Commons CC BY 4.0 [license](https://creativecommons.org/licenses/by/4.0/deed.en). When using the data, you must give an attribution to the following paper and provide a link to the dataset: 
+This page contains an open multimodal vehicle dataset described in the "Towards Collecting Large-Scale Vehicular Sensor Data for Open Access" paper, published in the 12th International Workshop on Autonomous Systems and Software Architecture (WASA) 2026. The data is free to be used under the Creative Commons CC BY 4.0 [license](https://creativecommons.org/licenses/by/4.0/deed.en). When using the data, you must give an attribution to the following paper and provide a link to the dataset:
 
 _B. Kämä, O. Timonen, N. Stafford, J. Lotvonen, O. Kalliokoski, A. Kanerva, P. Rathnayake, S. Gamage, A. Vuorinen, S. Ariram, E. Gilman & E. Peltonen.
 Towards Collecting Large-Scale Vehicular Sensor Data for Open Access. IEEE 23rd International Conference on Software Architecture Companion (ICSA-C). Amsterdam, Netherlands. 2026_
@@ -53,17 +53,17 @@ Recording settings for Lidar:
 
 The dataset has people's faces and vehicle license plates blurred to respect people's privacy. Hence the dataset does not contain the original .mcap files which would include unblurred images.
 
-| Data source                  | Description                                  | Original format             | Dataset format       | Target frequency |
-| ---------------------------- | -------------------------------------------- | --------------------------- | -------------------- | ---------------- |
-| /lidar_points ROS2 topic     | LiDAR                                        | PointCloud2 (230400 points) | .laz                 | 10hz             |
-| /image_raw ROS2 topic        | Thermal cameras                              | mono16                      | 8-bit colormap .png  | 60hz             |
-| /aux/image_color ROS2 topic  | Stereo camera's middle camera                | bgr8                        | 8-bit rgb .png       | 25hz             |
-| /left/image_rect ROS2 topic  | Stereo camera's left camera                  | mono8                       | 8-bit grayscale .png | 25hz             |
-| /right/image_rect ROS2 topic | Stereo camera's right camera                 | mono8                       | 8-bit grayscale .png | 25hz             |
-| /left/depth ROS2 topic       | Stereo camera's estimated depth distance     | 32FC1                       | 8-bit colormap .png  | 25hz             |
-| /left/cost ROS2 topic        | Stereo camera's confidence value of /left/depth | mono8                    | 8-bit grayscale .png | 25hz             |
-| Car CAN bus                  | Car CAN bus messages                         | Hexadecimal bytes           | Human-readable .json |                  |
-| PCAN-GPS                     | GPS sensor data                              | Hexadecimal bytes           | Human-readable .json |                  |
+| Data source                  | Description                                     | Original format             | Dataset format       | Target frequency |
+| ---------------------------- | ----------------------------------------------- | --------------------------- | -------------------- | ---------------- |
+| /lidar_points ROS2 topic     | LiDAR                                           | PointCloud2 (230400 points) | .laz                 | 10hz             |
+| /image_raw ROS2 topic        | Thermal cameras                                 | mono16                      | 8-bit colormap .png  | 60hz             |
+| /aux/image_color ROS2 topic  | Stereo camera's middle camera                   | bgr8                        | 8-bit rgb .png       | 25hz             |
+| /left/image_rect ROS2 topic  | Stereo camera's left camera                     | mono8                       | 8-bit grayscale .png | 25hz             |
+| /right/image_rect ROS2 topic | Stereo camera's right camera                    | mono8                       | 8-bit grayscale .png | 25hz             |
+| /left/depth ROS2 topic       | Stereo camera's estimated depth distance        | 32FC1                       | 8-bit colormap .png  | 25hz             |
+| /left/cost ROS2 topic        | Stereo camera's confidence value of /left/depth | mono8                       | 8-bit grayscale .png | 25hz             |
+| Car CAN bus                  | Car CAN bus messages                            | Hexadecimal bytes           | Human-readable .json |                  |
+| PCAN-GPS                     | GPS sensor data                                 | Hexadecimal bytes           | Human-readable .json |                  |
 
 Message frequencies are generally slightly below target because some messages are dropped during recording. CAN and GPS frequencies are over 700 messages per second, however they have no "target" frequency. There are no messages lost in them, but unknown CAN signals are excluded out of this dataset. 100% of GPS signals are converted and included in this dataset.
 
