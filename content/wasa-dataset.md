@@ -1,6 +1,6 @@
 ---
 date: "2026-06-08T15:39:52+03:00"
-title: "Wasa dataset"
+title: "WASA dataset"
 ---
 
 This is the dataset and its description for "Towards Collecting Large-Scale Vehicular Sensor Data for Open Access" paper.
