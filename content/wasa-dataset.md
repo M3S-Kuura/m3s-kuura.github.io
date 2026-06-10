@@ -56,11 +56,11 @@ The dataset has people's faces and vehicle license plates blurred to respect peo
 | ---------------------------- | -------------------------------------------- | --------------------------- | -------------------- | ---------------- |
 | /lidar_points ROS2 topic     | LiDAR                                        | PointCloud2 (230400 points) | .laz                 | 10hz             |
 | /image_raw ROS2 topic        | Thermal cameras                              | mono16                      | 8-bit colormap .png  | 60hz             |
-| /aux/image_color ROS2 topic  | Multisense's middle camera                   | bgr8                        | 8-bit rgb .png       | 25hz             |
-| /left/image_rect ROS2 topic  | Multisense's left camera                     | mono8                       | 8-bit grayscale .png | 25hz             |
-| /right/image_rect ROS2 topic | Multisense's right camera                    | mono8                       | 8-bit grayscale .png | 25hz             |
-| /left/depth ROS2 topic       | Multisense's estimated depth distance        | 32FC1                       | 8-bit colormap .png  | 25hz             |
-| /left/cost ROS2 topic        | Multisense's confidence value of /left/depth | mono8                       | 8-bit grayscale .png | 25hz             |
+| /aux/image_color ROS2 topic  | Stereo camera's middle camera                | bgr8                        | 8-bit rgb .png       | 25hz             |
+| /left/image_rect ROS2 topic  | Stereo camera's left camera                  | mono8                       | 8-bit grayscale .png | 25hz             |
+| /right/image_rect ROS2 topic | Stereo camera's right camera                 | mono8                       | 8-bit grayscale .png | 25hz             |
+| /left/depth ROS2 topic       | Stereo camera's estimated depth distance     | 32FC1                       | 8-bit colormap .png  | 25hz             |
+| /left/cost ROS2 topic        | Stereo camera's confidence value of /left/depth | mono8                    | 8-bit grayscale .png | 25hz             |
 | Car CAN bus                  | Car CAN bus messages                         | Hexadecimal bytes           | Human-readable .json |                  |
 | PCAN-GPS                     | GPS sensor data                              | Hexadecimal bytes           | Human-readable .json |                  |
 
