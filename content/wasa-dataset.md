@@ -168,6 +168,7 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/city/can.tar)              |
 
 {{</details>}}
+
 {{<details closed="true" title="City 2">}}
 
 | Size estimation | Data source                                                                  |
@@ -183,6 +184,7 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa2/city/can.tar)              |
 
 {{</details>}}
+
 {{<details closed="true" title="City 3">}}
 
 | Size estimation | Data source                                                                  |
@@ -198,6 +200,7 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa3/city/can.tar)              |
 
 {{</details>}}
+
 {{<details closed="true" title="Highway 1">}}
 
 | Size estimation | Data source                                                                     |
@@ -213,6 +216,7 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | 67 MB           | [Car CAN bus & GPS](https://a3s.fi/swift/v1/wasa1/highway/can.tar)              |
 
 {{</details>}}
+
 {{<details closed="true" title="Highway 2">}}
 
 | Size estimation | Data source                                                                     |
