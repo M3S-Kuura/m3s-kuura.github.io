@@ -8,7 +8,8 @@ This page contains an open multimodal vehicle dataset described in the "Towards 
 _B. Kämä, O. Timonen, N. Stafford, J. Lotvonen, O. Kalliokoski, A. Kanerva, P. Rathnayake, S. Gamage, A. Vuorinen, S. Ariram, E. Gilman & E. Peltonen.
 Towards Collecting Large-Scale Vehicular Sensor Data for Open Access. IEEE 23rd International Conference on Software Architecture Companion (ICSA-C). Amsterdam, Netherlands. 2026_
 
-[Link to the preprint](https://www.researchgate.net/publication/406808081_Towards_Collecting_Large-Scale_Vehicular_Sensor_Data_for_Open_Access)
+[Link to the preprint](https://www.researchgate.net/publication/406808081_Towards_Collecting_Large-Scale_Vehicular_Sensor_Data_for_Open_Access) and [[final publication] (Towards Collecting Large-Scale Vehicular Sensor Data for Open Access)
+](https://ieeexplore.ieee.org/document/11641223)
 
 For further enqueries and questions about the data or paper, please contact benjamin.kama or ella.peltonen at oulu.fi
 
