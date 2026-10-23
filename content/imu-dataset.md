@@ -4,7 +4,7 @@ title: "Muhos dataset"
 slug: "muhos-dataset"
 ---
 
-This page is the data specification for the Muhos dataset. The dataset includes IMU data from three different devices ([Hesai OT-128 Lidar](https://www.hesaitech.com/product/ot128/), [Carnegie Multisense S27 Stereocamera](https://shop.carnegierobotics.com/products/multisense-s27), [Bosch XDK 110](https://xdk-docs.legic.com/downloads/XDK_Guide_General_Information.pdf)), as well as Stereocamera camera pictures, and Lidar pointcloud files.
+This page is the data specification for the Muhos dataset. The dataset includes IMU data from three different devices ([Hesai OT-128 Lidar](https://www.hesaitech.com/product/ot128/), [Carnegie Multisense S27 Stereocamera](https://shop.carnegierobotics.com/products/multisense-s27), [Bosch XDK 110](https://xdk-docs.legic.com/downloads/XDK_Guide_General_Information.pdf)), as well as Stereocamera camera pictures, Lidar pointcloud files, GPS and CAN bus data.
 
 This dataset continues the work started with the [WASA dataset](https://m3s-kuura.github.io/wasa-dataset/) and described in the "Towards Collecting Large-Scale Vehicular Sensor Data for Open Access" paper, published in the 12th International Workshop on Autonomous Systems and Software Architecture (WASA) 2026. Both datasets are free to be used under the Creative Commons CC BY 4.0 [license](https://creativecommons.org/licenses/by/4.0/deed.en). When using the data, you must give an attribution to the following paper and provide a link to the dataset:
 
