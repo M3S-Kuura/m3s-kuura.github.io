@@ -4,4 +4,4 @@ title: "M3S Kuura content"
 ---
 
 [Wasa dataset](/wasa-dataset)
-[Imu dataset](/imu-dataset)
+[Muhos dataset](/imu-dataset)
