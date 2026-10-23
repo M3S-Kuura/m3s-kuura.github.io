@@ -1,6 +1,7 @@
 ---
 date: "2026-10-10T15:39:52+03:00"
 title: "Muhos dataset"
+slug: "muhos-dataset"
 ---
 
 This page is the data specification for the Muhos dataset. The dataset includes IMU data from three different devices ([Hesai OT-128 Lidar](https://www.hesaitech.com/product/ot128/), [Carnegie Multisense S27 Stereocamera](https://shop.carnegierobotics.com/products/multisense-s27), [Bosch XDK 110](https://xdk-docs.legic.com/downloads/XDK_Guide_General_Information.pdf)), as well as Stereocamera camera pictures, and Lidar pointcloud files.
