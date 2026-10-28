@@ -3,7 +3,7 @@ date: "2026-10-10T15:39:52+03:00"
 title: "IMU dataset"
 ---
 
-This page is the data specification for IMU dataset. The dataset includes IMU from three different devices ([Hesai OT-128 Lidar](https://www.hesaitech.com/product/ot128/), [Carnegie Multisense S27 Stereocamera](https://shop.carnegierobotics.com/products/multisense-s27), [Bosch XDK 110](https://xdk-docs.legic.com/downloads/XDK_Guide_General_Information.pdf)), Multisense camera pictures, and Lidar pointcloud files.
+This page is the data specification for IMU dataset. The dataset includes IMU from three different devices ([Hesai OT-128 Lidar](https://www.hesaitech.com/product/ot128/), [Carnegie Multisense S27 Stereocamera](https://shop.carnegierobotics.com/products/multisense-s27), [Bosch XDK 110](https://xdk-docs.legic.com/downloads/XDK_Guide_General_Information.pdf)), car CAN and GPS messages, Multisense camera pictures, and Lidar pointcloud files.
 
 ![Our trusty steed](./images/auto.jpg)
 
@@ -13,25 +13,26 @@ The dataset was collected by driving in areas around Oulu, Finland while having 
 
 ![Bosch imu](./images/bosch-imu.png)
 
-### Included datasets
+## Included datasets
 
 All datasets were collected in similar weather conditions: sunny, ~10°C in October around Oulu region.
 
 | Road quality | Dataset name | Driving speed in km/h |
 | -- | -- | -- |
 | Bumpy gravel | imu_bumpy_gravel_processed | ~20 |
-| Gravel | imu_soratie_processed | 30 |
+| Gravel | imu_soratie_processed | 30-50 |
+| City center | imu_city_center_processed | 20-40 |
 | Residential area | imu_rajakyla_processed | 40 |
 | Paved road (60kmh) | imu_60kmh_processed | 60 |
 | Paved road (Alakylantie) | imu_alakylantie_80kmh_processed | 80 |
 | Highway | imu_highway_processed | 100 |
 
 
-### Computer and software setup
+## Computer and software setup
 
 The computer inside the car is a [NVIDIA Jetson AGX Orin Developer Kit](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/) on Ubuntu 24.04 running ROS2 nodes in Docker containers. The nodes include sensor drivers, and a recorder to write the messages on an SSD in the form of [.mcap](https://mcap.dev/) files. [The source code for our setup is publicly available on github](https://github.com/M3S-Kuura/ros2-device-control). The source codes for the [.mcap processor](https://github.com/M3S-Kuura/Ros2-bag-processsor) and the [image anonymizer](https://github.com/M3S-Kuura/image-anonymizer) are also publicly available.
 
-### Car and sensor setup
+## Car and sensor setup
 
 The car used is a Toyota RAV4 Hybrid 2019.
 
@@ -239,6 +240,8 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | [Car CAN bus & GPS](https://a3s.fi/swift/v1/imu_city_center_processed/can.tar)              | CAN bus & PCAN-GPS |
 | [IMU](https://a3s.fi/swift/v1/imu_city_center_processed/imu.tar)             | IMU devices        |
 
+[Google maps link to route](https://www.google.com/maps/d/edit?mid=1icraxfNP3t1LsRU_wj1C9GtJVZZYAHs&usp=sharing)
+
 {{</details>}}
 
 {{<details closed="true" title="Highway">}}
@@ -253,6 +256,8 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | [/lidar_points](https://a3s.fi/swift/v1/imu_highway_processed/lidar_points.tar)         | Lidar              |
 | [Car CAN bus & GPS](https://a3s.fi/swift/v1/imu_highway_processed/can.tar)              | CAN bus & PCAN-GPS |
 | [IMU](https://a3s.fi/swift/v1/imu_highway_processed/imu.tar)             | IMU devices        |
+
+[Google maps link to route](https://www.google.com/maps/d/edit?mid=1WKMLbndwCh7idwwrAbp7I_A55hFXKqo&usp=sharing)
 
 {{</details>}}
 
@@ -269,6 +274,8 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | [Car CAN bus & GPS](https://a3s.fi/swift/v1/imu_60kmh_processed/can.tar)              | CAN bus & PCAN-GPS |
 | [IMU](https://a3s.fi/swift/v1/imu_60kmh_processed/imu.tar)             | IMU devices        |
 
+[Google maps link to route](https://www.google.com/maps/d/edit?mid=1dd_eGdxNo1qcRP92NxdPDWVBY8Ohj-8&usp=sharing)
+
 {{</details>}}
 
 {{<details closed="true" title="Paved road 80kmh">}}
@@ -283,6 +290,8 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | [/lidar_points](https://a3s.fi/swift/v1/imu_alakylantie_80kmh_processed/lidar_points.tar)         | Lidar              |
 | [Car CAN bus & GPS](https://a3s.fi/swift/v1/imu_alakylantie_80kmh_processed/can.tar)              | CAN bus & PCAN-GPS |
 | [IMU](https://a3s.fi/swift/v1/imu_alakylantie_80kmh_processed/imu.tar)             | IMU devices        |
+
+[Google maps link to route](https://www.google.com/maps/d/edit?mid=1rZCKyipTRVe-lf6MEuo7TH9x651VpT0&usp=sharing)
 
 {{</details>}}
 
@@ -299,6 +308,8 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | [Car CAN bus & GPS](https://a3s.fi/swift/v1/imu_rajakyla_processed/can.tar)              | CAN bus & PCAN-GPS |
 | [IMU](https://a3s.fi/swift/v1/imu_rajakyla_processed/imu.tar)             | IMU devices        |
 
+[Google maps link to route](https://www.google.com/maps/d/edit?mid=1TyYIdxLau8A7d07CSlXNIOOAsVJceCc&usp=sharing)
+
 {{</details>}}
 
 {{<details closed="true" title="Bumpy gravel">}}
@@ -314,6 +325,8 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | [Car CAN bus & GPS](https://a3s.fi/swift/v1/imu_bumpy_gravel_processed/can.tar)              | CAN bus & PCAN-GPS |
 | [IMU](https://a3s.fi/swift/v1/imu_bumpy_gravel_processed/imu.tar)             | IMU devices        |
 
+[Google maps link to route](https://www.google.com/maps/d/edit?mid=1RGDXG6qlDvdySkEphDSPN1p-D4UOVIY&usp=sharing)
+
 {{</details>}}
 
 {{<details closed="true" title="Gravel">}}
@@ -328,6 +341,8 @@ Timestamps of all files are included in the file name in [Unix time format](http
 | [/lidar_points](https://a3s.fi/swift/v1/imu_soratie_processed/lidar_points.tar)         | Lidar              |
 | [Car CAN bus & GPS](https://a3s.fi/swift/v1/imu_soratie_processed/can.tar)              | CAN bus & PCAN-GPS |
 | [IMU](https://a3s.fi/swift/v1/imu_soratie_processed/imu.tar)             | IMU devices        |
+
+[Google maps link to route](https://www.google.com/maps/d/edit?mid=1t5cyN60F0WFl3vVJ5Odz365XrXty_Y0&usp=sharing)
 
 {{</details>}}
 
