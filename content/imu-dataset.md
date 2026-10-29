@@ -1,9 +1,19 @@
 ---
 date: "2026-10-10T15:39:52+03:00"
-title: "IMU dataset"
+title: "Muhos dataset"
+slug: "muhos-dataset"
 ---
 
-This page is the data specification for IMU dataset. The dataset includes IMU from three different devices ([Hesai OT-128 Lidar](https://www.hesaitech.com/product/ot128/), [Carnegie Multisense S27 Stereocamera](https://shop.carnegierobotics.com/products/multisense-s27), [Bosch XDK 110](https://xdk-docs.legic.com/downloads/XDK_Guide_General_Information.pdf)), car CAN and GPS messages, Multisense camera pictures, and Lidar pointcloud files.
+This page is the data specification for the Muhos dataset. The dataset includes IMU data from three different devices ([Hesai OT-128 Lidar](https://www.hesaitech.com/product/ot128/), [Carnegie Multisense S27 Stereocamera](https://shop.carnegierobotics.com/products/multisense-s27), [Bosch XDK 110](https://xdk-docs.legic.com/downloads/XDK_Guide_General_Information.pdf)), as well as Stereocamera camera pictures, Lidar pointcloud files, GPS and CAN bus data.
+
+This dataset continues the work started with the [WASA dataset](https://m3s-kuura.github.io/wasa-dataset/) and described in the "Towards Collecting Large-Scale Vehicular Sensor Data for Open Access" paper, published in the 12th International Workshop on Autonomous Systems and Software Architecture (WASA) 2026. Both datasets are free to be used under the Creative Commons CC BY 4.0 [license](https://creativecommons.org/licenses/by/4.0/deed.en). When using the data, you must give an attribution to the following paper and provide a link to the dataset:
+
+_B. Kämä, O. Timonen, N. Stafford, J. Lotvonen, O. Kalliokoski, A. Kanerva, P. Rathnayake, S. Gamage, A. Vuorinen, S. Ariram, E. Gilman & E. Peltonen.
+Towards Collecting Large-Scale Vehicular Sensor Data for Open Access. IEEE 23rd International Conference on Software Architecture Companion (ICSA-C). Amsterdam, Netherlands. 2026_
+
+[Link to the preprint](https://www.researchgate.net/publication/406808081_Towards_Collecting_Large-Scale_Vehicular_Sensor_Data_for_Open_Access) and [final publication](https://ieeexplore.ieee.org/document/11641223)
+
+For further enqueries and questions about the data or paper, please contact benjamin.kama or ella.peltonen at oulu.fi
 
 ![Our trusty steed](./images/auto.jpg)
 
