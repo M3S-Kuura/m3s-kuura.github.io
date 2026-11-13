@@ -1,4 +1,5 @@
 ---
+
 title: "Tupos dataset"
 slug: "tupos-dataset"
 ---
@@ -280,7 +281,6 @@ Unfortunately Imu data from lidar & stereo camera is missing from this recording
 
 [Google maps link to route](https://www.google.com/maps/d/edit?mid=15JgdIibdPcUE_kb4E6Vrua8iFtD2s-Q&usp=sharing)
 
-
 {{</details>}}
 
 {{<details closed="true" title="Tupos dark black ice">}}
@@ -299,6 +299,8 @@ Unfortunately Imu data from lidar & stereo camera is missing from this recording
 | [IMU](https://a3s.fi/swift/v1/tupos_dataset/tupos_dark_black_ice_processed/imu.tar)             | IMU devices        |
 
 [Google maps link to route]()
+
+{{</details>}}
 
 {{<details closed="true" title="Tupos dark dewy">}}
 
